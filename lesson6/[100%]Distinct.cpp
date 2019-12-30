@@ -3,16 +3,15 @@
 
 // you can write to stdout for debugging purposes, e.g.
 // cout << "this is a debug message" << endl;
-#include <climits>
+#include<algorithm>
 int solution(vector<int> &A) {
     // write your code in C++14 (g++ 6.2.0)
-    int total=0;
-    for(int i:A) total+= i;
-    int res = INT_MAX ,temp =0;
-    for(int i:A)
+    if(A.empty()) return 0 ;
+    sort(A.begin() ,A.end());
+    int res = 1;
+    for(int i =0;i<A.size()-1;++i)
     {
-        temp +=A[i];
-        res = min(res, abs(2*temp-total)) ;      
+        if(A[i]!=A[i+1]) res++;
     }
     return res;
 }
