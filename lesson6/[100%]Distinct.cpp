@@ -3,6 +3,7 @@
 
 // you can write to stdout for debugging purposes, e.g.
 // cout << "this is a debug message" << endl;
+//method 1
 #include<algorithm>
 int solution(vector<int> &A) {
     // write your code in C++14 (g++ 6.2.0)
@@ -14,4 +15,13 @@ int solution(vector<int> &A) {
         if(A[i]!=A[i+1]) res++;
     }
     return res;
+}
+//method 2
+#include<set>
+int solution(vector<int> &A) {
+    // write your code in C++14 (g++ 6.2.0)
+    set<int>s;
+    for(int i:A) s.insert(i);
+    return s.size();
+    
 }

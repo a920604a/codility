@@ -5,6 +5,7 @@
 // cout << "this is a debug message" << endl;
 #include<algorithm>
 #include<set>
+//method 1
 int solution(vector<int> &A) {
     // write your code in C++14 (g++ 6.2.0)
     sort(A.begin(), A.end());
@@ -21,5 +22,18 @@ int solution(vector<int> &A) {
         else res++;
     }
     return res;
+    
+}
+// method 2
+int solution(vector<int> &A) {
+    // write your code in C++14 (g++ 6.2.0)
+    sort(A.begin() ,A.end());
+    int res=1;
+    for(int i:A)
+    {
+        if(i==res)  res++;
+        else if(i>res) return res;
+    }
+    return A[A.size()-1]>0?A[A.size()-1]+1:1;
     
 }
