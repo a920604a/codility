@@ -1,6 +1,5 @@
 # codility
 Not finished 
-
 lesson4 77% MaxCounter
 
 lesson5 62% GenomicRangeQuery -->time out
