@@ -1,6 +1,8 @@
 # codility
-Not finished 
+Not finished
+
 lesson4 77% MaxCounter
+
 lesson5 62% GenomicRangeQuery -->time out
 
 lesson5 70% MinAvgTwoSlice
